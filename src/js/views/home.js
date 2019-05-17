@@ -1,4 +1,5 @@
 import React from "react";
+import Cards from "../component/cards";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 
@@ -13,6 +14,7 @@ export class Home extends React.Component {
 				<a href="#" className="btn btn-success">
 					If you see this green button, bootstrap is working
 				</a>
+				<Cards />
 			</div>
 		);
 	}
