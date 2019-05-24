@@ -22,7 +22,7 @@ export default class Cards extends React.Component {
 										Some quick example text to build on the card title and make up the bulk of the
 										cards content.
 									</p>
-									<button type="button" className="btn btn-primary">
+									<button type="button" className="btn btn-light-blue btn-md">
 										Read more
 									</button>
 								</div>
