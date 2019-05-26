@@ -7,8 +7,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export class Home extends React.Component {
 	render() {
 		return (
-			<div className="card-columns">
-				<Cards />
+			<div>
+				<Jumbotron />
+				<div className="card-columns">
+					<Cards />
+				</div>
 			</div>
 		);
 	}
