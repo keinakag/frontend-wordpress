@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Grover from "../../img/grover.png";
 
 export default class Navbar extends React.Component {
 	render() {
