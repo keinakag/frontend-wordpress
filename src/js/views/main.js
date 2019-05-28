@@ -7,8 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export class Main extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="maindiv">
 				<Mainjumbo />
+
 				<div>
 					<Maincards />
 				</div>

@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Grover from "../../img/grover.png";
 
 export default class Navbar extends React.Component {
 	render() {
 		return (
 			<nav className="mb-1 navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
-				<a className="navbar-brand" href="#">
-					Navbar
+				<a className="navbar-brand">
+					<img src={Grover} alt="Logo" className="Logo" />
 				</a>
 				<button
 					className="navbar-toggler"
