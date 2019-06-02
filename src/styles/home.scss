@@ -37,19 +37,70 @@
 
 #sticky.p{
     background: transparent;
-    font-size: 10px;
+    font-size:3.5vmin;
     max-width: 50px;
     width: 100%;
+
 }
+#footerbottom{
+    background:url(http://www.fullhdwpp.com/wp-content/uploads/Abstract-Gradient-48_www.FullHDWpp.com_.jpg?x69613) no-repeat;
+
+}
+ ::placeholder {
+        color:  #008752;
+    }
 
 
 #log{
  text-align: right;
         position:relative;
-color:rgb(91, 230, 248);
+color:rgb(108, 201, 255);
         left:0;
         right:300px;
         margin:auto;
         font-size: 20px;
 
 }
+
+.bg{
+    background:url(http://www.fullhdwpp.com/wp-content/uploads/Abstract-Gradient-48_www.FullHDWpp.com_.jpg?x69613) no-repeat;
+    width:100%;
+    height:100vh;
+}
+
+.form-container{
+border:0px solid;
+color:#fff;
+padding-top:50px;
+padding-bottom:60px;
+padding-right:60px;
+padding-left:60px;
+margin-top:10vh;
+-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+
+}
+
+#jumbotron{
+    background: black;
+    height: 900px;
+    width: auto;
+
+}
+
+.cardinfo {
+    background:white;
+
+}
+
+#infojumbo {
+    color:white;
+
+}
+
+.watchcontainer{
+    background-color: #5bc0de;
+
+}
+

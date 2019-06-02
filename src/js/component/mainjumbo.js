@@ -18,7 +18,9 @@ export default class Mainjumbo extends React.Component {
 						<p className="mb-4 pb-2 px-md-5 mx-md-5">
 							HBO®, HULU®, NETFLIX® and PRIME® available as add-ons.
 						</p>
-						<a className="btn blue-gradient">START YOUR FREE TRIAL</a>
+						<Link to={"/home"}>
+							<a className="btn blue-gradient">START YOUR FREE TRIAL</a>
+						</Link>
 					</div>
 				</div>
 			</div>

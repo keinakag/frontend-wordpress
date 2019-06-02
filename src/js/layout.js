@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
 import { Home } from "./views/home";
 import { Main } from "./views/main";
+import Registration from "./views/registration";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import Navbar from "./component/navbar";
-import { Footer } from "./component/footer";
+import Footer from "./component/footer";
+import { Watch } from "./views/watch";
 
 //create your first component
 export class Layout extends React.Component {
@@ -23,10 +24,11 @@ export class Layout extends React.Component {
 						<Switch>
 							<Route exact path="/" component={Main} />
 							<Route path="/home" component={Home} />
+							<Route path="/registration" component={Registration} />
+							<Route path="/watch" component={Watch} />
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
-						<Footer />
 					</ScrollToTop>
 				</BrowserRouter>
 			</div>

@@ -22,6 +22,7 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
+			// this.setState({ isModalOpen: false });
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
