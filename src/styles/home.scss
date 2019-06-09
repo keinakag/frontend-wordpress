@@ -1,6 +1,10 @@
 .fa-envelope {
     size:3px;
 }
+.navbar form .md-form input{
+    color:#f8f9fa;
+    font-size: 25px;
+}
 
 .md-avatar.size-1 {
   width: 40px;
@@ -37,6 +41,7 @@
 
 #sticky.p{
     background: transparent;
+
     font-size:3.5vmin;
     max-width: 50px;
     width: 100%;
@@ -104,3 +109,6 @@ box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 
 }
 
+.navbar{
+    box-shadow:none;
+}

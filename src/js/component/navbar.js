@@ -15,7 +15,7 @@ export default class Navbar extends React.Component {
 					<div className="md-form form-sm my-0">
 						<input
 							id="searchplace"
-							className="form-control form-control-sm mr-sm-2 mb-0"
+							className="form-control form-control-sm mr-sm-2 mb-0 "
 							type="text"
 							placeholder="Search"
 							aria-label="Search"

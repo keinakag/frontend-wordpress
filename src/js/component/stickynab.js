@@ -12,14 +12,15 @@ export default class Stickynab extends React.Component {
 				<div
 					className="modal fade"
 					id="exampleModal"
-					tabIndex={-1}
+					tabIndex="-1"
 					role="dialog"
 					aria-labelledby="exampleModalLabel"
+					data-backdrop="false"
 					aria-hidden="true">
 					<div className="modal-dialog" role="document">
 						<div className="modal-content">
-							<form className="text-center border border-light p-5">
-								<p className="h4 mb-4">Sign in</p>
+							<form className="text-center light-blue-text border border-light p-5">
+								<p className="h4 mb-4 ">SIGN IN</p>
 
 								<input
 									type="email"
@@ -51,8 +52,11 @@ export default class Stickynab extends React.Component {
 										<a href>Forgot password?</a>
 									</div>
 								</div>
-								<button className="btn btn-info btn-block my-4" type="submit">
-									Sign in
+
+								<button className="btn btn-info btn-block my-4 " type="submit">
+									<Link to={"/home"}>
+										<strong className="white-text">Sign in</strong>
+									</Link>
 								</button>
 
 								<p>
@@ -78,6 +82,7 @@ export default class Stickynab extends React.Component {
 						</div>
 					</div>
 				</div>
+
 				<nav id="sticky" className="navbar navbar-expand-lg fixed-top scrolling-navbar">
 					<p>
 						<img style={{ width: "10%", height: "10%" }} src={Groverlogo} />

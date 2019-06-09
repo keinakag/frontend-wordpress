@@ -8,7 +8,7 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import Navbar from "./component/navbar";
 import Footer from "./component/footer";
-import { Watch } from "./views/watch";
+import { Search } from "./views/search";
 
 //create your first component
 export class Layout extends React.Component {
@@ -25,7 +25,7 @@ export class Layout extends React.Component {
 							<Route exact path="/" component={Main} />
 							<Route path="/home" component={Home} />
 							<Route path="/registration" component={Registration} />
-							<Route path="/watch" component={Watch} />
+							<Route path="/search" component={Search} />
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

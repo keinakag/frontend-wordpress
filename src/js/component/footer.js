@@ -90,7 +90,7 @@ export default class Footer extends React.Component {
 
 				<div className="footer-copyright text-center py-3">
 					© 2019 Copyright:
-					<a href="https://mdbootstrap.com/education/bootstrap/"> Made by James and Keiji</a>
+					<a href="https://mdbootstrap.com/education/bootstrap/"> Made by Keiji</a>
 				</div>
 			</footer>
 		);
