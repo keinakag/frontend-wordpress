@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			mov: [],
 			movies: [
 				{
 					id: 33297,
@@ -221,6 +222,19 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
+			registerUser: (birthday, email, gender, password, username) => {
+				fetch("https://3000-e1c7e167-d546-4f0d-a145-7d70fcd6c0e4.ws-us0.gitpod.io/person", {
+					method: "post",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						birthday: birthday,
+						email: email,
+						gender: gender,
+						password: password,
+						username: username
+					})
+				});
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

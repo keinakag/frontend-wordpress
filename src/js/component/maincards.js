@@ -9,7 +9,7 @@ export default class Maincards extends React.Component {
 			<MDBContainer>
 				<div className="w-auto">
 					<section className="text-center my-5">
-						<h1 className="h1-responsive font-weight-bold-grey-text text-center my-5">Select Your Plan</h1>
+						<h1 className="h1-responsive font-weight-bold-grey-text text-center my-5">WHY GROVER?</h1>
 						<h2 className="grey-text text-center w-responsive mx-auto mb-5">
 							No contracts, commitments, or equipment rentals.
 						</h2>
@@ -23,14 +23,13 @@ export default class Maincards extends React.Component {
 									}}>
 									<div className="text-white text-center pricing-card d-flex align-items-center rgba-stylish-strong py-3 px-3 rounded">
 										<MDBCardBody>
-											<h5>Basic</h5>
-											<div className="price pt-0">
-												<h2 className="number mb-0">$8.99</h2>
-											</div>
+											<h5>GREAT FREE MOVIES </h5>
+
 											<ul className="striped mb-0">
 												<li>
 													<p>
-														<strong>1</strong> Screens you can watch on at the same time
+														Grover constantly searching all over the web for the best
+														torrents from the most important sites.
 													</p>
 												</li>
 												<li>
@@ -40,14 +39,14 @@ export default class Maincards extends React.Component {
 													<p>Unlimited movies and TV shows</p>
 												</li>
 												<li>
-													<p>Cancel anytime</p>
+													<p>best content on the web</p>
 												</li>
 												<li>
-													<p>First month free</p>
+													<p>always free</p>
 												</li>
 											</ul>
 											<MDBBtn outline color="white">
-												Select Plan
+												SUBCRIBE
 											</MDBBtn>
 										</MDBCardBody>
 									</div>
@@ -62,35 +61,30 @@ export default class Maincards extends React.Component {
 									}}>
 									<div className="text-white text-center pricing-card d-flex align-items-center rgba-teal-strong py-3 px-3 rounded">
 										<MDBCardBody>
-											<h5>STANDARD</h5>
-											<div className="price pt-0">
-												<h2 className="number mb-0">$12.99</h2>
-											</div>
+											<h5>NO RESTRICTIONS</h5>
+
 											<ul className="striped mb-0">
 												<li>
 													<p>HD available</p>
 												</li>
 												<li>
 													<p>
-														<strong>2</strong>
+														<strong>all</strong>
 														Screens you can watch on at the same time
 													</p>
 												</li>
 												<li>
-													<p>Watch on your laptop, TV, phone and tablet</p>
+													<p>
+														Watch any movie or TV show as many times as you want. All you
+														need to get started is a proper internet connection
+													</p>
 												</li>
 												<li>
-													<p>Unlimited movies and TV shows</p>
-												</li>
-												<li>
-													<p>Cancel anytime</p>
-												</li>
-												<li>
-													<p>First month free</p>
+													<p>Select quality and subtitles</p>
 												</li>
 											</ul>
 											<MDBBtn outline color="white">
-												Select Plan
+												SUBCRIBE
 											</MDBBtn>
 										</MDBCardBody>
 									</div>
@@ -105,33 +99,29 @@ export default class Maincards extends React.Component {
 									}}>
 									<div className="text-white text-center pricing-card d-flex align-items-center rgba-stylish-strong py-3 px-3 rounded">
 										<MDBCardBody>
-											<h5>PREMIUM</h5>
-											<div className="price pt-0">
-												<h2 className="number mb-0">$15.99</h2>
-											</div>
+											<h5>THE BEST QUALITY</h5>
+
 											<ul className="striped mb-0">
 												<li>
-													<p>HD available</p>
-												</li>
-												<li>
-													<p>Ultra HD available</p>
-												</li>
-												<li>
 													<p>
-														<strong>4</strong> Screens you can watch on at the same time
+														Watch your movie or episode instantly in HD and with subtitles.
+														And then keep watching.
 													</p>
 												</li>
 												<li>
-													<p>Watch on your laptop, TV, phone and tablet</p>
+													<p>Awesome catalogue</p>
 												</li>
 												<li>
-													<p>Unlimited movies and TV shows</p>
+													<p>
+														No wait or download time. Instant playback of your favorite free
+														movies and TV shows.
+													</p>
 												</li>
 												<li>
-													<p>Cancel anytime</p>
-												</li>
-												<li>
-													<p>First month free</p>
+													<p>
+														If the movie or TV show is out there, Grover Time will find the
+														best version possible and start streaming it right away.
+													</p>
 												</li>
 											</ul>
 											<MDBBtn outline color="white">

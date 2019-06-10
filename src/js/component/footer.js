@@ -48,10 +48,12 @@ export default class Footer extends React.Component {
 					<div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
 						<div className="col-md-8 col-12 mt-5">
 							<p style={{ lineHeight: "1.7rem" }}>
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-								laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-								architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-								sit aspernatur aut odit aut fugit, sed quia consequuntur.
+								Downloading copyrighted material may be illegal in your country. Use at your own risk.
+								Popcorn Time is a multi-platform, free software BitTorrent client that includes an
+								integrated media player. The applications provide a free alternative to
+								subscription-based video streaming services such as Netflix. Popcorn Time uses
+								sequential downloading to stream video listed by several torrent websites, and third
+								party trackers can also be added manually.
 							</p>
 						</div>
 					</div>

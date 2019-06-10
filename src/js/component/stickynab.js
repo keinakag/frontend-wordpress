@@ -54,7 +54,7 @@ export default class Stickynab extends React.Component {
 								</div>
 
 								<button className="btn btn-info btn-block my-4 " type="submit">
-									<Link to={"/home"}>
+									<Link to={"home"}>
 										<strong className="white-text">Sign in</strong>
 									</Link>
 								</button>

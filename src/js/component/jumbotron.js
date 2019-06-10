@@ -23,7 +23,7 @@ export default class Jumbotron extends React.Component {
 									than the enemy.
 								</h5>
 								<span>
-									<Link to={"/watch"}>
+									<Link to={"/search"}>
 										<i className="text-white far fa-play-circle  fa-3x mr-3" />
 									</Link>
 									START WATCHING

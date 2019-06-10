@@ -32,7 +32,7 @@ export default class Registration extends React.Component {
 										<input
 											type="email"
 											className="form-control"
-											id="exampleInputEmail1"
+											id="InputEmail"
 											aria-describedby="emailHelp"
 											placeholder="Enter email"
 										/>
@@ -42,7 +42,7 @@ export default class Registration extends React.Component {
 										<input
 											type="password"
 											className="form-control"
-											id="exampleInputPassword1"
+											id="InputPassword"
 											placeholder="Password"
 										/>
 									</div>
@@ -51,7 +51,7 @@ export default class Registration extends React.Component {
 										<input
 											type="password"
 											className="form-control"
-											id="exampleInputPassword1"
+											id="InputUsername"
 											placeholder="Password"
 										/>
 									</div>
@@ -64,7 +64,7 @@ export default class Registration extends React.Component {
 											<input
 												type="text"
 												className="form-control"
-												id="validationCustom02"
+												id="Birthday"
 												placeholder="Month"
 												defaultValue=""
 												required
@@ -99,7 +99,7 @@ export default class Registration extends React.Component {
 									</div>
 									<div className="form-group">
 										<label htmlFor="exampleFormControlSelect1">Gender</label>
-										<select className="form-control" id="exampleFormControlSelect1">
+										<select className="form-control" id="InputGender">
 											<option>Female</option>
 											<option>Male</option>
 											<option>Prefer not to say</option>
@@ -123,7 +123,18 @@ export default class Registration extends React.Component {
 											</a>
 										</p>
 									</div>
-									<button type="submit" className="btn blue-gradient btn-lg btn-block mt-0">
+									<button
+										type="submit"
+										onClick={() =>
+											actions.signInUserClick(
+												document.querySelector("birthday").value,
+												document.querySelector("InputEmail").value,
+												document.querySelector("InputPassword").value,
+												document.querySelector("InputUsername").value,
+												document.querySelector("InputGender").value
+											)
+										}
+										className="btn blue-gradient btn-lg btn-block mt-0">
 										Submit
 									</button>
 								</form>
