@@ -4,6 +4,7 @@ import { Context } from "../store/appContext";
 import { MDBContainer } from "mdbreact";
 import "../../styles/demo.scss";
 import Groverlogo from "../../img/groverlogo.png";
+import PropTypes from "prop-types";
 
 export default class Stickynab extends React.Component {
 	render() {
@@ -64,10 +65,11 @@ export default class Stickynab extends React.Component {
 												onClick={() =>
 													actions.loginUser(
 														document.querySelector("#FormEmail").value,
-														document.querySelector("#FormPassword").value
+														document.querySelector("#FormPassword").value,
+														this.props.history
 													)
 												}>
-												<strong className="white-text">Sign in</strong>
+												<strong>Sign in</strong>
 											</button>
 
 											<p>
@@ -114,3 +116,6 @@ export default class Stickynab extends React.Component {
 		);
 	}
 }
+Stickynab.propTypes = {
+	history: PropTypes.array
+};

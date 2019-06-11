@@ -26,7 +26,7 @@ const injectContext = PassedComponent => {
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
-					store.mov = data;
+					store.users2 = data;
 					this.setState({ store });
 				});
 			// this.setState({ isModalOpen: false });

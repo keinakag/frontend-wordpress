@@ -23,7 +23,7 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Switch>
 							<Route exact path="/" component={Main} />
-							<Route path="/home" component={Home} />
+							<Route exact path="/home" component={Home} />
 							<Route path="/registration" component={Registration} />
 							<Route path="/search" component={Search} />
 							<Route path="/single/:theid" component={Single} />

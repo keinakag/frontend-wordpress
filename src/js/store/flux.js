@@ -1,7 +1,15 @@
+import PropTypes from "prop-types";
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			mov: [],
+			users: [
+				{
+					email: "popo@gmail.com",
+					password: "12345",
+					logStatus: false
+				}
+			],
+			users2: [],
 			movies: [
 				{
 					id: 33297,
@@ -222,21 +230,23 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
-			loginUser: (email, password) => {
+			loginUser: (emailInput, password, history) => {
+				const store = getStore();
 				// let attempt = 3;
-				let userLogIndex = store.mov.findIndex(x => {
-					return x.email === email;
+				let userLogIndex = store.users.findIndex(x => {
+					return x.email === emailInput;
 				});
-
+				console.log(userLogIndex);
 				if (
-					(email === store.mov[userLogIndex].email && password === store.mov[userLogIndex].password) ||
-					(email === store.mov[userLogIndex].email && password === store.mov[userLogIndex].password)
+					(emailInput === store.users[userLogIndex].email &&
+						password === store.users[userLogIndex].password) ||
+					(emailInput === store.users[userLogIndex].email && password === store.users[userLogIndex].password)
 				) {
 					alert("Login Successfully");
-					store.mov[userLogIndex].logStatus = true;
+					store.users[userLogIndex].logStatus = true;
 					// alert(store.users[userLogIndex].logStatus);
 					setStore({ store: store });
-					history.push("/home");
+					history.push("/");
 				} else {
 					// attempt--;
 					alert("Try Again");
@@ -272,6 +282,9 @@ const getState = ({ getStore, setStore }) => {
 			}
 		}
 	};
+};
+getState.propTypes = {
+	history: PropTypes.object
 };
 
 export default getState;

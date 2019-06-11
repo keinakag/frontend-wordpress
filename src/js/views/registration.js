@@ -80,7 +80,7 @@ export default class Registration extends React.Component {
 														<input
 															type="text"
 															className="form-control"
-															id="validationCustom02"
+															id="InputDay"
 															placeholder="Day"
 															defaultValue=""
 															required
@@ -92,7 +92,7 @@ export default class Registration extends React.Component {
 														<input
 															type="text"
 															className="form-control"
-															id="validationCustom02"
+															id="InputYear"
 															placeholder="Year"
 															defaultValue=""
 															required
