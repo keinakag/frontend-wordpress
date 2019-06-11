@@ -222,9 +222,30 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
+			loginUser: (email, password) => {
+				// let attempt = 3;
+				let userLogIndex = store.mov.findIndex(x => {
+					return x.email === email;
+				});
+
+				if (
+					(email === store.mov[userLogIndex].email && password === store.mov[userLogIndex].password) ||
+					(email === store.mov[userLogIndex].email && password === store.mov[userLogIndex].password)
+				) {
+					alert("Login Successfully");
+					store.mov[userLogIndex].logStatus = true;
+					// alert(store.users[userLogIndex].logStatus);
+					setStore({ store: store });
+					history.push("/home");
+				} else {
+					// attempt--;
+					alert("Try Again");
+				}
+			},
+
 			registerUser: (birthday, email, gender, password, username) => {
 				fetch("https://3000-e1c7e167-d546-4f0d-a145-7d70fcd6c0e4.ws-us0.gitpod.io/person", {
-					method: "post",
+					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						birthday: birthday,
