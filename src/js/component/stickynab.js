@@ -60,15 +60,15 @@ export default class Stickynab extends React.Component {
 											</div>
 
 											<button
+												type="button"
 												className="btn btn-info btn-block my-4 "
-												type="submit"
-												onClick={() =>
+												onClick={() => {
 													actions.loginUser(
 														document.querySelector("#FormEmail").value,
 														document.querySelector("#FormPassword").value,
 														this.props.history
-													)
-												}>
+													);
+												}}>
 												<strong>Sign in</strong>
 											</button>
 

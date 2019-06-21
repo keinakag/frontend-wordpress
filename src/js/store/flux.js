@@ -2,14 +2,9 @@ import PropTypes from "prop-types";
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			users: [
-				{
-					email: "popo@gmail.com",
-					password: "12345",
-					logStatus: false
-				}
-			],
-			users2: [],
+			users: [],
+			login: [],
+
 			movies: [
 				{
 					id: 33297,
@@ -230,31 +225,19 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
-			loginUser: (emailInput, password, history) => {
-				const store = getStore();
-				// let attempt = 3;
-				let userLogIndex = store.users.findIndex(x => {
-					return x.email === emailInput;
+			loginUser: (username, password) => {
+				fetch(process.env.HOST + "/login", {
+					method: "POST",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						username: username,
+						password: password
+					})
 				});
-				console.log(userLogIndex);
-				if (
-					(emailInput === store.users[userLogIndex].email &&
-						password === store.users[userLogIndex].password) ||
-					(emailInput === store.users[userLogIndex].email && password === store.users[userLogIndex].password)
-				) {
-					alert("Login Successfully");
-					store.users[userLogIndex].logStatus = true;
-					// alert(store.users[userLogIndex].logStatus);
-					setStore({ store: store });
-					history.push("/");
-				} else {
-					// attempt--;
-					alert("Try Again");
-				}
 			},
 
 			registerUser: (birthday, email, gender, password, username) => {
-				fetch("https://3000-e1c7e167-d546-4f0d-a145-7d70fcd6c0e4.ws-us0.gitpod.io/person", {
+				fetch(process.env.HOST + "/person", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -265,20 +248,6 @@ const getState = ({ getStore, setStore }) => {
 						username: username
 					})
 				});
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
 			}
 		}
 	};

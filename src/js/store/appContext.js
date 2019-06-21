@@ -22,11 +22,19 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			fetch("https://3000-e1c7e167-d546-4f0d-a145-7d70fcd6c0e4.ws-us0.gitpod.io/person")
+			fetch(process.env.HOST + "/person")
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
 					store.users2 = data;
+					this.setState({ store });
+				});
+
+			fetch(process.env.HOST + "/login")
+				.then(response => response.json())
+				.then(data => {
+					let { store } = this.state;
+					store.login = data;
 					this.setState({ store });
 				});
 			// this.setState({ isModalOpen: false });
