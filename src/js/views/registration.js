@@ -55,7 +55,7 @@ export default class Registration extends React.Component {
 														type="password"
 														className="form-control"
 														id="InputUsername"
-														placeholder="Password"
+														placeholder="username"
 													/>
 												</div>
 												<div className="mb-0">
@@ -130,10 +130,10 @@ export default class Registration extends React.Component {
 													type="submit"
 													onClick={() =>
 														actions.registerUser(
-															document.querySelector("#Birthday").value,
 															document.querySelector("#InputEmail").value,
 															document.querySelector("#InputPassword").value,
 															document.querySelector("#InputUsername").value,
+															document.querySelector("#Birthday").value,
 															document.querySelector("#InputGender").value
 														)
 													}

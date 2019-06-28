@@ -236,7 +236,7 @@ const getState = ({ getStore, setStore }) => {
 				});
 			},
 
-			registerUser: (birthday, email, gender, password, username) => {
+			registerUser: (email, password, username, birthday, gender) => {
 				fetch(process.env.HOST + "/person", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
