@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import injectContext from "../store/appContext";
+import React from "react";
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
@@ -225,15 +227,23 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
-			loginUser: (username, password) => {
-				fetch(process.env.HOST + "/login", {
+			loginUser: (route, email, password) => {
+				const store = getStore();
+				fetch("https://3000-cc0fdc34-a023-4230-8b6e-8b6315447377.ws-us0.gitpod.io/login", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						username: username,
+						email: email,
 						password: password
 					})
-				});
+				})
+					.then(response => response.json())
+					.then(data => {
+						setStore({ store, login: data });
+					});
+				if (!store.login.msg) {
+					route.push("/home");
+				}
 			},
 
 			registerUser: (email, password, username, birthday, gender) => {

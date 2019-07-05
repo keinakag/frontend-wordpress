@@ -5,8 +5,9 @@ import { MDBContainer } from "mdbreact";
 import "../../styles/demo.scss";
 import Groverlogo from "../../img/groverlogo.png";
 import PropTypes from "prop-types";
+import withRouter from "react-router/withRouter";
 
-export default class Stickynab extends React.Component {
+class Stickynab extends React.Component {
 	render() {
 		return (
 			<Context.Consumer>
@@ -64,9 +65,9 @@ export default class Stickynab extends React.Component {
 												className="btn btn-info btn-block my-4 "
 												onClick={() => {
 													actions.loginUser(
+														this.props.history,
 														document.querySelector("#FormEmail").value,
-														document.querySelector("#FormPassword").value,
-														this.props.history
+														document.querySelector("#FormPassword").value
 													);
 												}}>
 												<strong>Sign in</strong>
@@ -117,5 +118,6 @@ export default class Stickynab extends React.Component {
 	}
 }
 Stickynab.propTypes = {
-	history: PropTypes.array
+	history: PropTypes.object
 };
+export default withRouter(Stickynab);

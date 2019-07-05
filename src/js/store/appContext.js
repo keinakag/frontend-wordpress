@@ -1,5 +1,6 @@
 import React from "react";
 import getState from "./flux.js";
+import PropTypes from "prop-types";
 
 // Don't change, here is where we initialize our context, by default its just going to be Null.
 export const Context = React.createContext(null);
@@ -30,13 +31,6 @@ const injectContext = PassedComponent => {
 					this.setState({ store });
 				});
 
-			fetch(process.env.HOST + "/login")
-				.then(response => response.json())
-				.then(data => {
-					let { store } = this.state;
-					store.login = data;
-					this.setState({ store });
-				});
 			// this.setState({ isModalOpen: false });
 			/**
 			 * EDIT THIS!
