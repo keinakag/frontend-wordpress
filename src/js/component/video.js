@@ -6,9 +6,17 @@ import { MDBContainer } from "mdbreact";
 export default class Video extends React.Component {
 	render() {
 		return (
-			<div className="search">
-				<div className="active-purple-3 active-purple-4 mb-4">
-					<input className="form-control" type="text" placeholder="Search" aria-label="Search" />
+			<div className="wrap">
+				<div className="search">
+					<input
+						style={{ fontSize: "50px" }}
+						type="text"
+						className="searchTerm"
+						placeholder="What are you looking for?"
+					/>
+					<button type="submit" className="searchButton">
+						<i className="fa fa-search" />
+					</button>
 				</div>
 			</div>
 		);
