@@ -7,17 +7,19 @@ import "../../styles/home.scss";
 export default class Videonav extends React.Component {
 	render() {
 		return (
-			<nav id="sticky" className="navbar navbar-expand-lg fixed-top scrolling-navbar">
-				<p>
-					<img style={{ width: "10%", height: "10%" }} src={Groverlogo} />
-				</p>
+			<div className="container-fluid">
+				<nav id="sticky" className="navbar navbar-expand-lg fixed-top scrolling-navbar">
+					<p>
+						<img style={{ width: "10%", height: "10%" }} src={Groverlogo} />
+					</p>
 
-				<span id="log">
-					<Link to={"/"}>
-						<strong>LOG IN</strong>
-					</Link>
-				</span>
-			</nav>
+					<span id="log">
+						<Link to={"/"}>
+							<strong>LOG IN</strong>
+						</Link>
+					</span>
+				</nav>
+			</div>
 		);
 	}
 }

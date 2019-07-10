@@ -5,12 +5,13 @@ import Groverlogo from "../../img/groverlogo.png";
 import "../../styles/home.scss";
 import Video from "../component/video";
 import Videonav from "../component/videonav";
+import Searchbk from "../../img/searchbk.png";
 
 export class Search extends React.Component {
 	render() {
 		return (
-			<div className="search">
-				<div>
+			<div className="container-fluid bk">
+				<div className="nav">
 					<Videonav />
 				</div>
 				<div>
