@@ -4,9 +4,10 @@ import React from "react";
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			users2: [],
 			users: [],
 			login: [],
-
+			logUser: null,
 			movies: [
 				{
 					id: 33297,
@@ -229,6 +230,9 @@ const getState = ({ getStore, setStore }) => {
 		actions: {
 			loginUser: (route, email, password) => {
 				const store = getStore();
+				let logUser = store.users2.find(item => {
+					return item.email == email && item.password == password;
+				});
 				fetch("https://3000-cc0fdc34-a023-4230-8b6e-8b6315447377.ws-us0.gitpod.io/login", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
@@ -239,10 +243,18 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => response.json())
 					.then(data => {
-						setStore({ store, login: data });
+						setStore({ login: data, logUser: logUser });
 					});
-				if (!store.login.msg) {
+
+				if (store.login.jwt) {
 					route.push("/home");
+				} else if (store.login.msg == "Bad email or password") {
+					alert("wrong email or password");
+				} else if (
+					store.login.msg == "Missing email parameter" ||
+					store.login.msg == "Missing password parameter"
+				) {
+					alert("missing password or email");
 				}
 			},
 
@@ -258,6 +270,11 @@ const getState = ({ getStore, setStore }) => {
 						username: username
 					})
 				});
+			},
+
+			logout: route => {
+				setStore({ logUser: null });
+				route.push("/");
 			}
 		}
 	};
