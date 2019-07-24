@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "../component/cards";
 import "../../styles/home.scss";
-import Jumbotron from "../component/jumbotron";
+import Carrusel from "../component/carrusel";
 import Navbar from "../component/navbar";
 import { withRouter } from "react-router-dom";
 
@@ -13,7 +13,7 @@ export class Home extends React.Component {
 				<div>
 					<Navbar />
 				</div>
-				<Jumbotron />
+				<Carrusel />
 				<div className="card-columns">
 					<Cards />
 				</div>

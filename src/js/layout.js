@@ -7,6 +7,7 @@ import Registration from "./views/registration";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import Navbar from "./component/navbar";
+import Carrusel from "./component/carrusel";
 import Footer from "./component/footer";
 import { Search } from "./views/search";
 
