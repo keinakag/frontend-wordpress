@@ -259,15 +259,17 @@ const getState = ({ getStore, setStore }) => {
 			},
 
 			registerUser: (email, password, username, birthday, gender) => {
-				fetch(process.env.HOST + "/person", {
+				fetch(process.env.HOST + "/wp/v2/users", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						birthday: birthday,
-						email: email,
-						gender: gender,
 						password: password,
-						username: username
+						username: username,
+						email: email,
+						meta: {
+							birthday: birthday,
+							gender: gender
+						}
 					})
 				});
 			},

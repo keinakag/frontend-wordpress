@@ -14,6 +14,7 @@ export class Home extends React.Component {
 					<Navbar />
 				</div>
 				<Carrusel />
+				<h1>movies</h1>
 				<div className="card-columns">
 					<Cards />
 				</div>
