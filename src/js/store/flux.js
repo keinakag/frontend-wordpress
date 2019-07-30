@@ -259,7 +259,41 @@ const getState = ({ getStore, setStore }) => {
 			},
 
 			registerUser: (email, password, username, birthday, gender) => {
-				fetch(process.env.HOST + "/wp/v2/users", {
+				console.log(email, password, username, birthday, gender);
+				let token =
+					"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvODA4MC1kMzQ3MDQ3My05YzA2LTRiZWUtYjUxNi0wZGM4ZmI5YmQ2M2Eud3MtdXMwLmdpdHBvZC5pbyIsImlhdCI6MTU2NDAxMDExMSwibmJmIjoxNTY0MDEwMTExLCJleHAiOjE1NjQ2MTQ5MTEsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.C0wCQpP5wnedki7VFE5SC6_3JhGrc8shBIQ1a8lQgGU";
+				fetch("https://8080-d3470473-9c06-4bee-b516-0dc8fb9bd63a.ws-us0.gitpod.io/wp-json/wp/v2/users", {
+					method: "POST",
+					headers: { "Content-type": "application/json", Authorization: "Bearer" + token },
+					body: JSON.stringify({
+						password: password,
+						username: username,
+						email: email,
+						meta: {
+							birthday: birthday,
+							gender: gender
+						}
+					})
+				})
+					.then(response => {
+						// Add a condition to test if status code was anything other than 200, then return
+						if (response.status !== 200) {
+							console.error("Connection error, code ", response.status);
+							return;
+						}
+					})
+					.catch(err => {
+						console.error(err);
+					});
+			},
+
+			logout: route => {
+				setStore({ logUser: null });
+				route.push("/");
+			},
+
+			mdb: () => {
+				fetch("https://api.themoviedb.org/3/movie/76341?api_key={api_key}", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -272,11 +306,6 @@ const getState = ({ getStore, setStore }) => {
 						}
 					})
 				});
-			},
-
-			logout: route => {
-				setStore({ logUser: null });
-				route.push("/");
 			}
 		}
 	};

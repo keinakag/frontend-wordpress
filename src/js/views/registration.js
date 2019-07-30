@@ -7,6 +7,24 @@ import Groverlogo from "../../img/groverlogo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class Registration extends React.Component {
+	constructor(props) {
+		super(props);
+		this.InputEmail = React.createRef();
+		this.InputPassword = React.createRef();
+		this.InputUsername = React.createRef();
+		this.Birthday = React.createRef();
+		this.InputGender = React.createRef();
+	}
+
+	handleClick = actions => {
+		actions.registerUser(
+			this.InputEmail.current.value,
+			this.InputPassword.current.value,
+			this.InputUsername.current.value,
+			this.Birthday.current.value,
+			this.InputGender.current.value
+		);
+	};
 	render() {
 		return (
 			<Context.Consumer>
@@ -35,6 +53,7 @@ export default class Registration extends React.Component {
 													<input
 														type="email"
 														className="form-control"
+														ref={this.InputEmail}
 														id="InputEmail"
 														aria-describedby="emailHelp"
 														placeholder="Enter email"
@@ -45,6 +64,7 @@ export default class Registration extends React.Component {
 													<input
 														type="password"
 														className="form-control"
+														ref={this.InputPassword}
 														id="InputPassword"
 														placeholder="Password"
 													/>
@@ -52,9 +72,10 @@ export default class Registration extends React.Component {
 												<div className="form-group">
 													<label htmlFor="exampleInputPassword1">Username</label>
 													<input
-														type="password"
+														type="text"
 														className="form-control"
 														id="InputUsername"
+														ref={this.InputUsername}
 														placeholder="username"
 													/>
 												</div>
@@ -68,6 +89,7 @@ export default class Registration extends React.Component {
 															type="text"
 															className="form-control"
 															id="Birthday"
+															ref={this.Birthday}
 															placeholder="Month"
 															defaultValue=""
 															required
@@ -102,7 +124,10 @@ export default class Registration extends React.Component {
 												</div>
 												<div className="form-group">
 													<label htmlFor="exampleFormControlSelect1">Gender</label>
-													<select className="form-control" id="InputGender">
+													<select
+														className="form-control"
+														id="InputGender"
+														ref={this.InputGender}>
 														<option>Female</option>
 														<option>Male</option>
 														<option>Prefer not to say</option>
@@ -127,16 +152,8 @@ export default class Registration extends React.Component {
 													</p>
 												</div>
 												<button
-													type="submit"
-													onClick={() =>
-														actions.registerUser(
-															document.querySelector("#InputEmail").value,
-															document.querySelector("#InputPassword").value,
-															document.querySelector("#InputUsername").value,
-															document.querySelector("#Birthday").value,
-															document.querySelector("#InputGender").value
-														)
-													}
+													type="button"
+													onClick={() => this.handleClick(actions)}
 													className="btn blue-gradient btn-lg btn-block mt-0">
 													Submit
 												</button>
